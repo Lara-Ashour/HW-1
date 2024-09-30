@@ -1,1 +1,6 @@
-
+Entity	Attributes	Primary Key	Foreign Keys
+Bay	Bay Number, Bay Location, Bay Height	Bay Number	-
+Bin	Bin Number, Bay Number, Bin Size, Maximum Loaded Weight	Composite (Bay Number + Bin Number)	Bay Number
+Fork Lift	Equipment Number, Maximum Carrying Weight, Fuel Type, Bay Number	Equipment Number	Bay Number
+Item	Item Number, Item Weight, Date Stored, Current Bay Number, Current Bin Number	Item Number	Bay Number, Bin Number
+Item Movement	Movement ID, Item Number, Source Bay Number, Source Bin Number, Destination Bay Number, Destination Bin Number, Movement Date	Movement ID	Item Number, Source Bay Number, Source Bin Number, Destination Bay Number, Destination Bin Number
